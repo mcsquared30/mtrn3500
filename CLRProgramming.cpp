@@ -22,14 +22,15 @@ int main()
 	//double a = 3.14159; // allocated on the stack
 	//double b[100000]; // space allocated on the stack
 	// Memory gets cleared in all the following cases
-	//Line 22: creating an objecting using stack semantics
+	//Line 26: creating an objecting using stack semantics
 	Data MyData(2, 3, 4); // Space automatically allocated on the heap -- if we use 'value' instead of 'ref' above, then this is allocated on the stack instead
 	// Exceptions to stack semantics => Strings and arrays
 	
 	// Extract the handle that is pointing to MyData on the heap:
-	Data^ MyDataHndl = % MyData;
-	Data^ DataHndl = gcnew Data(2, 3, 4);
-	int^ a = gcnew int(50); // A handle, similar to a point, allocated space on the managed HEAP
+	Data^ MyDataHndl = % MyData; // Stack-allocated (but heap-managed) Data object (handle is on the stack, data value is on the managed heap),
+	// passing the MyData object by reference, which will be pointed to by the handle MyDataHndl
+	Data^ DataHndl = gcnew Data(2, 3, 4); // New data handle which will point to the Data object on the managed heap
+	int^ a = gcnew int(50); // A handle, similar to a pointer, allocated space on the managed HEAP
 	//Printing to the screen
 	Console::WriteLine("{0,12:F3}", DataHndl->GetA());
 	Console::WriteLine("{0,12:F3}", MyData.GetA());
