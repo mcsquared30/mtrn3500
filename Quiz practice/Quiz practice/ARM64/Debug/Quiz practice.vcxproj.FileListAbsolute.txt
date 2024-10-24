@@ -1,2 +1,0 @@
-C:\Users\MTRN VM\source\repos\Quiz practice\Quiz practice\ARM64\Debug\Quiz practice.vcxproj.AssemblyReference.cache
-C:\Users\MTRN VM\source\repos\Quiz practice\Quiz practice\ARM64\Debug\Quiz practice.vcxproj.SuggestedBindingRedirects.cache
