@@ -1,2 +1,0 @@
-C:\Users\MTRN VM\source\repos\UGV\UGV\x64\Debug\UGV.vcxproj.AssemblyReference.cache
-C:\Users\MTRN VM\source\repos\UGV\UGV\x64\Debug\UGV.vcxproj.SuggestedBindingRedirects.cache
