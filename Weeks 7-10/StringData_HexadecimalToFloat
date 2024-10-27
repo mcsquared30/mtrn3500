@@ -1,0 +1,19 @@
+using namespace System;
+
+int main()
+{
+    double Range;
+    String^ Response = "Range data is 2F3E mm"; // Must convert the substring for temp to a float
+    array<String^>^ SubStringList = Response->Split(' ');
+    for (int i = 0; i < SubStringList->Length; i++) {
+        Console::WriteLine(SubStringList[i]);
+    }
+
+    Range = Convert::ToInt32(SubStringList[3],16); // Convert the string to 4 bytes representing a hexadecimal number
+
+    Console::WriteLine("The range: {0:F3}", Range);
+
+    Console::ReadKey();
+
+    return 0;
+}
