@@ -1,19 +1,19 @@
 using namespace System;
 
-int main() 
+int main()
 {
-  double Temperature;
-  String^ Response = "Room1 temperature is 23.5°"; // Must convert the substring for temp to a float
-  array<String^>^ SubStringList = Response->Split(" ");
-  for (int i = 0; i < SubStringList->Length; i++) {
-    Console::WriteLine(SubStringList[i]);
-  }
-  
-  Temperature = Convert::ToDouble(SubStringList[3]);
-  
-  Console::WriteLine("The temperature: {0:F3}", Temperature);
+    double Temperature;
+    String^ Response = "Room1 temperature is 23.5 degrees"; // Must convert the substring for temp to a float
+    array<String^>^ SubStringList = Response->Split(' ');
+    for (int i = 0; i < SubStringList->Length; i++) {
+        Console::WriteLine(SubStringList[i]);
+    }
 
-  Console::ReadKey();
+    Temperature = Convert::ToDouble(SubStringList[3]);
 
-  return 0;
+    Console::WriteLine("The temperature: {0:F3}", Temperature);
+
+    Console::ReadKey();
+
+    return 0;
 }
