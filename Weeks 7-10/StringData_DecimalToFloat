@@ -1,0 +1,19 @@
+using namespace System;
+
+int main() 
+{
+  double Temperature;
+  String^ Response = "Room1 temperature is 23.5°"; // Must convert the substring for temp to a float
+  array<String^>^ SubStringList = Response->Split(" ");
+  for (int i = 0; i < SubStringList->Length; i++) {
+    Console::WriteLine(SubStringList[i]);
+  }
+  
+  Temperature = Convert::ToDouble(SubStringList[3]);
+  
+  Console::WriteLine("The temperature: {0:F3}", Temperature);
+
+  Console::ReadKey();
+
+  return 0;
+}
