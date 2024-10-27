@@ -1,0 +1,2 @@
+C:\Users\capk6\OneDrive\Documents\MTRN3500Lectures\2023\Lecture Videos\Week05\Serial\x64\Debug\Serial.vcxproj.AssemblyReference.cache
+C:\Users\capk6\OneDrive\Documents\MTRN3500Lectures\2023\Lecture Videos\Week05\Serial\x64\Debug\Serial.exe
