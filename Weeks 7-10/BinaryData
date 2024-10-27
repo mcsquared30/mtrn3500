@@ -1,0 +1,19 @@
+using namespace System;
+
+int main()
+{
+	double A = 626592.3987869;//EB CB 2D CC 40 1F 23 41
+	//LSByte is at low address and MSByte is at high address
+	unsigned char Data[8] = {0xEB/*LSByte*/, 0xCB, 0x2D, 0xCC, 0x40, 0x1F, 0x23, 0x41/*MSByte*/}; // Storing the binary data bytes of A
+	double B;
+	Console::WriteLine("{0:F12} ", B); // will be some garbage value
+
+	unsigned char* BytePtr = (unsigned char*)&B; // Points to the first byte of the variable B
+	for (int i = 0; i < sizeof(double); i++) {
+		*(BytePtr+i) = Data[i]; // Assemble the binary bytes into the double variable B
+  }
+	Console::WriteLine("A=>{0:F12} ", A);
+	Console::WriteLine("B=>{0:F12} ", B);
+	Console::ReadKey();
+	return 0;
+}
